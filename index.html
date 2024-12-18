@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shashwat Rai - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            color: beige;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1a0f0f;
+            box-shadow: 0 4px 6px rgba(114, 191, 19, 0.1);
+        }
+
+        nav .left {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        nav .right ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav .right ul li {
+            font-size: 1rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        nav  ul li a {
+            text-decoration: none;
+            color: beige;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover {
+            color: #f0a500;
+        }
+
+        nav  ul li::after {
+            content: '';
+            display: block;
+            height: 2px;
+            width: 0;
+            background-color: beige;
+            transition: width 0.3s ease-in-out;
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+        }
+
+        nav  ul li:hover::after {
+            width: 100%;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .firstsection > div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 2rem;
+        }
+
+        .rightsection img {
+            width: 80%;
+        }
+
+        .purple {
+            color: aqua;
+        }
+        #element{
+            color: blue;
+        }
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
+        }
+        hr{
+        border: 0;
+        background: aqua;
+        height: 0.1px;
+        margin: 10px;
+       }
+       .secondSection h1{
+        font-size: 1rem;
+       }
+       .secondSection .box{
+        background: white;
+        width: 80vw;
+        height: 1px;
+        margin: 56px 0;
+        display: flex;
+       }
+       .secondSection .vertical{
+        background-color: white;
+        width: 1px;
+        height: 90px;
+        margin: 0 90px;
+       }
+       .image-top{
+        width: 23px;
+     }
+     .vertical-text{
+        font-size: 1rem;
+        top: -32px;
+        left: -9px;
+     }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="left">Shashwat's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                    <li><a href="/contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My Name is <span class="purple">Shashwat Rai</span>
+                <span id="element"></span>
+            </div>
+            <div class="rightsection">
+                <img src="bg.png.png" alt="Profile Background">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <h1>Experience: </h1>
+
+        <div class="box">
+        <div class="vertical">
+            <img class="image-top" src="developer.png.png" alt="">
+            <div class="vertical-text">
+                Internship-Software Developer
+            </div>
+        </div>
+        <div class="vertical"></div>
+        <div class="vertical"></div>
+        <div class="vertical"></div>
+        </div>
+
+        </section>
+    </main>
+</body>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('#element', {
+      strings: ['I am looking for a job opportunity', 'and I am a Frontend Developer'],
+      typeSpeed: 50,
+    });
+  </script>
+</html>
